@@ -27,7 +27,7 @@ const Cart = () => {
 
   const postData = async () => {
     try {
-      await fetch(`http://localhost:3000/api/cart/${session.user?.email}`, {
+      await fetch(`http://localhost:3000/api/cart/${session?.user?.email}`, {
         method: 'PUT',
         headers: {
           Accept: 'application/json',
