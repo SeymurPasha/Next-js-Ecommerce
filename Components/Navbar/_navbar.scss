@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.ant-menu {
+  border: none;
+}
+.ant-menu-light {
+  width: 30%;
+}
+
+.ant-menu-submenu {
+
+}
+
+.ant-menu-sub {
+    min-width:400px;
+    min-height:50%;
+    display: flex;
+}
+
+.ant-menu-item-group-title {
+  font-weight: 900;
+}
+.ant-menu-item-group a  {
+ display: block;
+ margin: 5px 0px 20px 15px;
+}
+
+
+

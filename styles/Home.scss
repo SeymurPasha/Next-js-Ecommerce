@@ -1,0 +1,42 @@
+
+@import '../Components/Navbar/navbar';
+@import '../Components/Searchfield/searchfield';
+@import '../Components/RecommendedItems/recommendedItems';
+@import '../Components/Footer/footer';
+@import '../Components/Signin/signin';
+@import '../Components/MainLogo/mainlogo';
+@import '../Components/Cart/cart';
+@import '../Components/FilterComponent/filtercomponent';
+@import '../Components/ProductGallery/productgallery';
+@import '../Components/ProductDetails/productdetails';
+@import '../Components//ProductDescription/productdescription';
+@import '../Components/ProductInfo/productinfo';
+@import '../Components//ProductSize/productsize';
+@import '../Components/AddProduct/addproduct';
+@import '../Components/ProductPrice/productprice';
+@import '../Components/ProductColor/productcolor';
+@import '../Components/Delimeter/delimeter';
+
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+}
+.products {
+    display: flex;
+    justify-content: space-around; 
+    .filter-options {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.product {
+  display: flex;
+  justify-content: space-evenly;
+  .product-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+}

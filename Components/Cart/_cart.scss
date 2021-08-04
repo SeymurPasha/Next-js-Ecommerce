@@ -1,0 +1,41 @@
+.ant-card {
+    margin-left: 20px;
+    }
+
+    .card-icon {
+        font-size: 1.7rem;
+    }
+    
+    .rounded {
+      .ant-card-cover img {
+        border-radius: 300%;
+      }
+    }
+    
+    .ant-card-cover {
+      height: 80%;
+    }
+    .ant-card-cover img {
+     height: 100%;
+    }
+    
+    
+    .ant-card-meta-title {
+      font-size: 16px;
+    }
+    
+    .ant-modal {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 30%;
+      height: 100vh;
+    }
+    .ant-modal-content {
+      height: 100vh;
+      overflow-y: scroll;
+    }
+    
+    .ant-modal-title {
+      text-align: center;
+    }

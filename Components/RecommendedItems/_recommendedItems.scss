@@ -1,0 +1,13 @@
+.recommended-items {
+  display: 'flex';
+  flex-direction: 'column'; 
+  margin: 1em; 
+
+  .recommended-products {
+    display: flex;
+  }
+
+  .meta {
+    text-align: center;
+  }
+}
