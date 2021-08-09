@@ -14,11 +14,14 @@ export default async (req, res) => {
     cart.save();
   } else {
     try {
-      const cart = await Cart.findOneAndUpdate({ user_email: id }, req.body, {
-        new: true,
+      const cart = await Cart.findOneAndUpdate({ user_email: id }, {products : req.body}, {
         runValidators: true,
+        new:true,
+        useFindAndModify:false
+      }, (error, data) => {
+        if(error) {console.log(error)}
+        else {console.log(data)}
       });
-
       if (!cart) {
         return res.status(400).json({ success: false });
       }

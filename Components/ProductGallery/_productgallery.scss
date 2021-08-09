@@ -1,8 +1,8 @@
 .product-gallery {
     display: flex;
+    justify-content: space-evenly;
     width: 50%;
     height: 90vh;
-    
 
     .image-list {
         display: flex; 
@@ -18,11 +18,34 @@
     }
     .main-image-container {
         height: 100%;
-        width: 80%;
+        width: 70%;
         .main-image {
             height: 100%;
             width: 100%;
             border: 1px solid #d9d9d9;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+           width: 100%;
+           height: 90vh;
+           justify-content: space-around;
+           .image-list {
+            img {
+                height: 20%;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        .main-image-container {
+            height: 100%;
+            width: 75%;
+            .main-image {
+                height: 100%;
+                width:100%;
+                border: 1px solid #d9d9d9;
+            }
         }
     }
 }

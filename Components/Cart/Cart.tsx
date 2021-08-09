@@ -59,8 +59,7 @@ const Cart = () => {
 
   const setAmount = async (option:String, id:any) => {
     const cartItem = cart.filter((i:any) => i.id === id);
-
-    cartItem[0].amount += 1;
+    option === "plus" ? cartItem[0].amount += 1 : cartItem[0].amount -= 1; 
 
     const newCart = cart.map((i:any) => (i.id === id ? cartItem[0] : i));
 
@@ -76,8 +75,8 @@ const Cart = () => {
     <>
       <ShoppingOutlined className="card-icon" onClick={showModal} />
       <Modal footer={null} title="Your cart" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-
-        {cart
+        {session ? 
+        cart.length > 0
           ? cart.map((i:any) => (
             <CartItem
               key={i.id}
@@ -85,6 +84,7 @@ const Cart = () => {
               img={i.img}
               title={i.title}
               price={i.price}
+              currency_code={i.currency_code}
               amount={i.amount}
               setAmount={setAmount}
               deleteItem={deleteFromCart}
@@ -92,9 +92,11 @@ const Cart = () => {
           ))
           : (
             <div>
-              <h1>Your cart is empty</h1>
+              <h1>No items in cart</h1>
             </div>
-          )}
+          )
+        : <div><h1>Sign in to use cart</h1> </div>
+        }
       </Modal>
     </>
   );

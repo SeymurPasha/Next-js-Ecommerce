@@ -18,17 +18,6 @@ interface ItemsInterface {
 }
 
 export default function RecommendedItems({ title, shape, products }:Props) {
-  // const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   axios.get(`https://openapi.etsy.com/v2/listings/active?api_key=78pwg3cv7qq8f16h74a0yf6v&includes=Images&tags=shoes&tags=${tags}&limit=6`)
-  //     .then((res) => {
-  //       setProducts(res.data.results);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
   return (
     <div className="recommended-items">
       <h3>{title}</h3>

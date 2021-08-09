@@ -1,4 +1,4 @@
-import React from 'react';
+import React,  { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Carousel, Skeleton } from 'antd';
 
@@ -7,11 +7,16 @@ interface Props {
 }
 
 export default function ImageGallery({ products } : Props) {
+  const [state, setstate] = useState(0)
+  useEffect(() => {
+   const width = window.innerWidth;
+   setstate(width)
+  }, [])
   return (
     <Carousel
       autoplay
       autoplaySpeed={2000}
-      slidesToShow={8}
+      slidesToShow={ state < 500 ? 3 : 8} 
       dots={false}
     >
       {products.map((i:any) => (

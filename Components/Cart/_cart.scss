@@ -4,6 +4,11 @@
 
     .card-icon {
         font-size: 1.7rem;
+        @media only screen and (max-width:500px) {
+          position: absolute;
+          top: .5em;
+          right: 1em;
+        }
     }
     
     .rounded {
@@ -30,10 +35,15 @@
       right: 0;
       max-width: 30%;
       height: 100vh;
+      @media only screen and (max-width: 500px) {
+        max-width: 100%;
+
+      }
     }
     .ant-modal-content {
       height: 100vh;
-      overflow-y: scroll;
+      overflow-y: auto;
+
     }
     
     .ant-modal-title {

@@ -8,7 +8,7 @@ interface Props {
 }
 const ProductSize:React.FC<Props> = ({ product } : Props) => (
   <div className="product-price">
-    <h2>{`${product.price} ${product.currency_code}`}</h2>
+    <span>{`${product.price} ${product.currency_code}`}</span>
   </div>
 );
 

@@ -1,0 +1,25 @@
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    animation: fadein .7s ease-in;
+    &:hover {
+    cursor: pointer;
+    background-color: #F8F9F9;
+    }
+
+    .btns {
+     align-self: flex-end;
+    }
+
+    button {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

@@ -7,7 +7,7 @@ interface Props {
 }
 const ProductInfo:React.FC<Props> = ({ product } : Props) => (
   <div className="product-info">
-    <h2>{product.title}</h2>
+    <span>{product.title}</span>
   </div>
 );
 

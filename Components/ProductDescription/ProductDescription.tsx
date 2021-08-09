@@ -7,7 +7,7 @@ interface Props {
     taxonomy_path:string
   }
 }
-const ProductInfo:React.FC<Props> = ({ product } : Props) => (
+const ProductDescrition:React.FC<Props> = ({ product } : Props) => (
   <div className="product-description">
     <div>
       <h5>Materials</h5>
@@ -24,4 +24,4 @@ const ProductInfo:React.FC<Props> = ({ product } : Props) => (
   </div>
 );
 
-export default ProductInfo;
+export default ProductDescrition;

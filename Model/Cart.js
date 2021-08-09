@@ -23,6 +23,10 @@ const CartSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Please add an price'],
       },
+      currency_code: {
+        type: Number,
+        required: [true, 'Please add an currency code'],
+      },
       amount: {
         type: Number,
         required: [true, 'Please add an id'],

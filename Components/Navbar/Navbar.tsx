@@ -17,7 +17,7 @@ export default function Navbar() {
 
     <div className="navbar">
       <MainLogo />
-      <Menu style={{ width: '40%' }} mode="horizontal">
+      <Menu mode="horizontal">
         <SubMenu key="men" title="Men">
           <Menu.ItemGroup title="Shoes">
             {shoes.map((i) => <Link href={`/products/ men+${i}`} key={i}><a href="/#">{i}</a></Link>)}
@@ -91,9 +91,12 @@ export default function Navbar() {
           </Menu.ItemGroup>
         </SubMenu>
       </Menu>
+        <div className="section-2">
       <SearchField />
       <SignIn />
       <Cart />
+        </div>
+     
     </div>
   );
 }

@@ -11,4 +11,10 @@
             color: white;
         }
     }
+
+    @media only screen and (max-width:500px) {
+        button {
+            width: 80%;
+        }
+    }
 }

@@ -10,4 +10,12 @@
   .meta {
     text-align: center;
   }
+
+  @media only screen and (max-width: 500px) {
+    margin: 0.5em;
+    .recommended-products {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    }
+}
 }

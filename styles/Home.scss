@@ -16,6 +16,7 @@
 @import '../Components/ProductPrice/productprice';
 @import '../Components/ProductColor/productcolor';
 @import '../Components/Delimeter/delimeter';
+@import '../Components/CartItem/cartitem';
 
 
 .homepage {
@@ -24,11 +25,50 @@
 }
 .products {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-evenly;
+    .test {
+        width: 75%;
+    }
+    .displayed-products {
+        display: grid;
+        grid-template-columns: repeat(4, 4fr);
+        .displayed-products-cart {
+            width: 200px;
+            height: 320px;
+            margin: 1em 1em 1em 1em;
+        }
+    }
     .filter-options {
         display: flex;
         flex-direction: column;
+        width: 15%;        
     }
+
+    @media only screen and (max-width: 500px) {
+        flex-direction: column;
+        .test {
+            width: 100%;
+        }
+        .displayed-products {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            .displayed-products-cart {
+                width: 180px;
+                height: 310px;
+                margin: .5em .5em .5em .5em;
+            }
+        }
+        .filter-options {
+            width: 100%;
+            flex-direction: row;
+            overflow-x: scroll;
+            margin-bottom:.5em;
+            cursor: pointer;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        }
 }
 
 .product {
@@ -38,5 +78,8 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+  }
+  @media only screen and (max-width:500px) {
+  flex-direction: column;
   }
 }

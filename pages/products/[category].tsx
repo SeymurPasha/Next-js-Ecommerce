@@ -101,13 +101,13 @@ export default function Products({ products, category } : { products:Object[] })
 
       </div>
 
-      <div>
+      <div className="test">
         <InfiniteScroll
           dataLength={filteredProducts.length}
           next={getMorePosts}
           hasMore={10}
         >
-          <div style={{ display: 'inline-grid', gridTemplateColumns: 'repeat(4, 4fr)' }}>
+          <div className="displayed-products">
             {filteredProducts.map((i, index) => (
               <a
                 href={`/product/${i.listing_id}`}
@@ -119,9 +119,7 @@ export default function Products({ products, category } : { products:Object[] })
                 <Card
                   hoverable
                   key={i.listing_id}
-                  style={{
-                    width: 200, margin: '10px', height: '320px', textAlign: 'center',
-                  }}
+                  className="displayed-products-cart"
                   cover={i.Images[0] ? <img alt="example" src={i.Images[0].url_fullxfull} /> : <img alt="empty" src="" />}
                 >
                   <Meta title={`${i.price}  ${i.currency_code}`} />
