@@ -6,7 +6,7 @@
     width: 50%;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1000px) {
     flex-direction: column;
     .section-2 {
       width: 100%;
@@ -22,7 +22,7 @@
 .ant-menu-light {
   width: 40%;
  
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1000px) {
   width: 100%;
   }
 }

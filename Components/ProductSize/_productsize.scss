@@ -1,2 +1,12 @@
 .product-size {
-}
+
+    .select-size {
+        width: 120px;
+    }
+
+    @media only screen and (max-width:400px) {
+        .select-size {
+            width: 100px;
+        }
+        }
+    }

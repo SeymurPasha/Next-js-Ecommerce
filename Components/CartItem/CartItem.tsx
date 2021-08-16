@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function CartItem({
-  id, img, title, price, amount, setAmount, deleteItem, currency_code
+  id, img, title, price, amount, setAmount, deleteItem
 } : Props) {
   const itemPrice = amount * parseInt(price, 10)
   return (
@@ -22,7 +22,7 @@ export default function CartItem({
       <img src={img} alt="" />
       <div style={{display:'flex', flexDirection:'column'}}>
       <h5>{title}</h5>
-      <h4>{`${itemPrice} ${currency_code}`}</h4>
+      <h4>{itemPrice}</h4>
       </div>
       
       </div>

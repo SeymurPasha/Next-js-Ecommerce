@@ -37,7 +37,6 @@ const Product = ({ item } : { item:any }) => {
         img: item[0].Images[0].url_75x75,
         title: item[0].title,
         price: item[0].price,
-        currency_code: item[0].currency_code,
         amount: 1,
       };
       setCart([...cart, newItem]);

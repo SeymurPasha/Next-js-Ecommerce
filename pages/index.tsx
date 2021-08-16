@@ -19,8 +19,7 @@ export async function getStaticProps() {
   };
 }
 export default function Home(props) {
-  console.log(props.data.results)
-  const rcmdItems1 = props.data.results.filter((i) => i.taxonomy_path[0] === 'Clothing').slice(0, 6);
+  const rcmdItems1 = props.data.results.filter((i) => i.taxonomy_path[0] === 'Clothing' || 'Home & Living').slice(0, 6);
   const rcmdItems2 = props.data.results.filter((i) => i.taxonomy_path[0] === 'Craft Supplies & Tools').slice(0, 6);
   const rcmdItems3 = props.data.results.filter((i) => i.taxonomy_path[0] === 'Jewelry').slice(0, 6);
   const imageGallery = props.data.results.slice(55, 80);

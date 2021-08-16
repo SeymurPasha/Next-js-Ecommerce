@@ -84,7 +84,6 @@ const Cart = () => {
               img={i.img}
               title={i.title}
               price={i.price}
-              currency_code={i.currency_code}
               amount={i.amount}
               setAmount={setAmount}
               deleteItem={deleteFromCart}

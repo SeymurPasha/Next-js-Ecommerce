@@ -17,6 +17,7 @@
 @import '../Components/ProductColor/productcolor';
 @import '../Components/Delimeter/delimeter';
 @import '../Components/CartItem/cartitem';
+@import '../Components/ProductQuantity/product-quantity';
 
 
 .homepage {
@@ -44,7 +45,32 @@
         width: 15%;        
     }
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 400px) {
+        flex-direction: column;
+        .test {
+            width: 100%;
+        }
+        .displayed-products {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            .displayed-products-cart {
+                width: 140px;
+                height: 280px;
+            }
+        }
+        .filter-options {
+            width: 100%;
+            flex-direction: row;
+            overflow-x: scroll;
+            margin-bottom:.5em;
+            cursor: pointer;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        }
+
+    @media (min-width: 400px)  and (max-width: 768px) {
         flex-direction: column;
         .test {
             width: 100%;
@@ -69,6 +95,34 @@
             }
         }
         }
+
+        @media (min-width: 768px)  and (max-width: 1000px) {
+            flex-direction: column;
+           
+            .test {
+                width: 100%;
+            }
+            .displayed-products {
+                display: grid;
+                grid-template-columns: repeat(3, 3fr);
+               padding-left: 2em;
+                .displayed-products-cart {
+                    width: 180px;
+                    height: 310px;
+                    margin: .5em .5em .5em .5em;
+                }
+            }
+            .filter-options {
+                width: 100%;
+                flex-direction: row;
+                overflow-x: scroll;
+                margin-bottom:.5em;
+                cursor: pointer;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+            }
 }
 
 .product {
@@ -79,7 +133,11 @@
       align-items: center;
       justify-content: space-around;
   }
-  @media only screen and (max-width:500px) {
+  @media only screen and (max-width:400px) {
+      flex-direction: column;
+  }
+
+  @media (min-width:400px) and (max-width:1000px) {
   flex-direction: column;
   }
 }

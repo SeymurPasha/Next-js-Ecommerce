@@ -7,7 +7,7 @@ export default function ProductSize() {
   return (
     <div className="product-size">
       <h4>Size</h4>
-      <Select placeholder="Size" style={{ width: 120 }}>
+      <Select className="select-size" placeholder="Size">
         <Option value="XS">XS</Option>
         <Option value="S">S</Option>
         <Option value="M">M</Option>

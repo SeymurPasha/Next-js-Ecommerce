@@ -5,13 +5,28 @@
 
   .recommended-products {
     display: flex;
+    justify-content: space-evenly;
   }
 
   .meta {
     text-align: center;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width:400px) {
+    width: 100%;
+    margin: 1em 0 0 0;
+    h3 {
+      margin-left: 1em;
+    }
+    .recommended-products {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2,2fr);
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 400px)  and (max-width:1000px) {
     margin: 0.5em;
     .recommended-products {
     display: grid;

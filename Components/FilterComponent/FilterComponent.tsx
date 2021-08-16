@@ -24,7 +24,7 @@ export default function FilterComponent({
     <div className="filter-component">
       <span id="filter-name">{filterName}</span>
       <Radio.Group onChange={onChange} name={title} value={value}>
-        <Space direction={ state < 500 ? "horizontal" :  "vertical"}>
+        <Space direction={ state < 1000 ? "horizontal" :  "vertical"}>
           <Radio value={option1}>{option1}</Radio>
           <Radio value={option2}>{option2}</Radio>
           <Radio value={option3}>{option3}</Radio>

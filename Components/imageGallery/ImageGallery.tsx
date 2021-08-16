@@ -16,7 +16,7 @@ export default function ImageGallery({ products } : Props) {
     <Carousel
       autoplay
       autoplaySpeed={2000}
-      slidesToShow={ state < 500 ? 3 : 8} 
+      slidesToShow={ state < 1000 ? 3 : 8} 
       dots={false}
     >
       {products.map((i:any) => (

@@ -50,11 +50,6 @@ export default function Footer() {
             <a href="/#">Careers</a>
           </Link>
         </li>
-        <li>
-          <Link href="/blog/hello-world">
-            <a href="/#">Press</a>
-          </Link>
-        </li>
       </div>
 
       <div>

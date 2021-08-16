@@ -1,10 +1,10 @@
 .ant-card {
-    margin-left: 20px;
+    // margin-left: 20px;
     }
 
     .card-icon {
         font-size: 1.7rem;
-        @media only screen and (max-width:500px) {
+        @media only screen and (max-width:1000px) {
           position: absolute;
           top: .5em;
           right: 1em;
@@ -35,7 +35,7 @@
       right: 0;
       max-width: 30%;
       height: 100vh;
-      @media only screen and (max-width: 500px) {
+      @media only screen and (max-width: 1000px) {
         max-width: 100%;
 
       }
