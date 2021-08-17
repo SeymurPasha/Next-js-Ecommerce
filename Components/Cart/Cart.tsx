@@ -7,6 +7,7 @@ import { useSession } from 'next-auth/client';
 import { MainContext } from '../../context/Context';
 import CartItem from '../CartItem/CartItem';
 
+
 const Cart = () => {
   const {
     isModalVisible, setIsModalVisible, cart, setCart,
@@ -58,16 +59,14 @@ const Cart = () => {
   }, [session]);
 
   const setAmount = async (option:String, id:any) => {
-    const cartItem = cart.filter((i:any) => i.id === id);
+    const cartItem:Array<any> = cart.filter((i:any) => i.id === id);
     option === "plus" ? cartItem[0].amount += 1 : cartItem[0].amount -= 1; 
-
-    const newCart = cart.map((i:any) => (i.id === id ? cartItem[0] : i));
-
+    const newCart:any = cart.map((i:any) => (i.id === id ? cartItem[0] : i));
     setCart(newCart);
   };
 
   const deleteFromCart = (id:any) => {
-    const newCart = cart.filter((i:any) => i.id !== id);
+    const newCart:any = cart.filter((i:any) => i.id !== id);
     setCart(newCart);
   };
 

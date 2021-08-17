@@ -7,7 +7,7 @@ interface Props {
   option2:number | string;
   option3:number | string;
   value:number | string;
-  onChange:() => void
+  onChange:(e:any) => void
 }
 
 export default function FilterComponent({

@@ -9,7 +9,14 @@ import AddProduct from '../AddProduct/AddProduct';
 
 interface Props {
   addProductToCart : () => void,
-  product:Object[]
+  product:{
+      title:string,
+      price:string,
+      currency_code:string,
+      materials: string, 
+      quantity: string, 
+      taxonomy_path: string,
+  }
 }
 
 const ProductDetails = ({ product, addProductToCart } : Props) => (

@@ -5,8 +5,8 @@ import React, {
 interface MainContextInterface {
   isModalVisible: boolean;
   setIsModalVisible: (isModalVisible:boolean) => void;
-  cart:Object[];
-  setCart:(cart:[]) => void;
+  cart:any;
+  setCart:(cart:any) => void;
 }
 
 const defaultState = {

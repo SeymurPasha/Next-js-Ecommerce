@@ -18,10 +18,10 @@ export async function getStaticProps() {
     props: { data }, // will be passed to the page component as props
   };
 }
-export default function Home(props) {
-  const rcmdItems1 = props.data.results.filter((i) => i.taxonomy_path[0] === 'Clothing' || 'Home & Living').slice(0, 6);
-  const rcmdItems2 = props.data.results.filter((i) => i.taxonomy_path[0] === 'Craft Supplies & Tools').slice(0, 6);
-  const rcmdItems3 = props.data.results.filter((i) => i.taxonomy_path[0] === 'Jewelry').slice(0, 6);
+export default function Home(props:any) {
+  const rcmdItems1 = props.data.results.filter((i:any) => i.taxonomy_path[0] === 'Clothing' || 'Home & Living').slice(0, 6);
+  const rcmdItems2 = props.data.results.filter((i:any) => i.taxonomy_path[0] === 'Craft Supplies & Tools').slice(0, 6);
+  const rcmdItems3 = props.data.results.filter((i:any) => i.taxonomy_path[0] === 'Jewelry').slice(0, 6);
   const imageGallery = props.data.results.slice(55, 80);
   return (
     <div className="homepage">

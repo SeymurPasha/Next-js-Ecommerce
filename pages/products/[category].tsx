@@ -30,7 +30,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-export default function Products({ products, category } : { products:Object[] }) {
+export default function Products({ products, category } : { products:Object[], category:string }) {
   const [filterBy, setFilter] = useState({
     price: 1000, color: '', material: '', location: '',
   });
@@ -38,7 +38,7 @@ export default function Products({ products, category } : { products:Object[] })
   const [moreProducts, setMoreProducts] = useState(products);
   const [offset, setOffset] = useState(1);
 
-  const onChange = (e) => {
+  const onChange = (e:any) => {
     setFilter({ ...filterBy, [e.target.name]: e.target.value });
   };
 
@@ -105,10 +105,11 @@ export default function Products({ products, category } : { products:Object[] })
         <InfiniteScroll
           dataLength={filteredProducts.length}
           next={getMorePosts}
-          hasMore={10}
+          hasMore={true}
+          loader = {<h1>Loading...</h1>}
         >
           <div className="displayed-products">
-            {filteredProducts.map((i, index) => (
+            {filteredProducts.map((i:any, index) => (
               <a
                 href={`/product/${i.listing_id}`}
                 target="_blank"

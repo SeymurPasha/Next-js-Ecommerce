@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 
 interface Props {
-  images:Object[];
+  images: [
+    {url_fullxfull : string }
+  ];
 }
 
 const ProductGallery:React.FC<Props> = ({ images } :Props) => {

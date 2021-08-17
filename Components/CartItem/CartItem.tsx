@@ -7,15 +7,14 @@ interface Props {
   title:string;
   price:string;
   amount:string;
-  setAmount:string;
-  deleteItem:string;
-  currency_code:string;
+  setAmount: (option:string, id:any) => void;
+  deleteItem:(id:any) => void;
 }
 
 export default function CartItem({
   id, img, title, price, amount, setAmount, deleteItem
 } : Props) {
-  const itemPrice = amount * parseInt(price, 10)
+  const itemPrice = Number(amount) * parseInt(price, 10)
   return (
     <div className="cart-item">
       <div style={{display:'flex'}}>

@@ -31,7 +31,7 @@ const Product = ({ item } : { item:any }) => {
 
   const createCartItem = () => {
     if (session) {
-      const newItem = {
+      const newItem:any = {
         id: item[0].listing_id,
         user_email: session.user?.email,
         img: item[0].Images[0].url_75x75,

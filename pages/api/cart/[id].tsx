@@ -1,7 +1,9 @@
 import dbConnect from '../../../utils/config';
 import Cart from '../../../Model/Cart';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async (req, res) => {
+
+export default async (req:NextApiRequest, res:NextApiResponse) => {
   await dbConnect();
 
   const {

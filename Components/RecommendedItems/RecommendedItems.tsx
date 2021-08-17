@@ -7,7 +7,7 @@ const { Meta } = Card;
 interface Props {
   shape:string;
   title:string;
-  props: Object[];
+  products: [];
 }
 
 interface ItemsInterface {
