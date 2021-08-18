@@ -43,7 +43,7 @@ export default function Products({ products, category } : { products:Object[], c
   };
 
   const getMorePosts = async () => {
-    const res = await fetch(`${window.location.hostname}/api/etsyApi?offset=${offset}&category=${category}`);
+    const res = await fetch(`/api/etsyApi?offset=${offset}&category=${category}`);
     const data = await res.json();
     setMoreProducts((prev) => [...prev, ...data.data.results]);
     setOffset(offset + 1);
