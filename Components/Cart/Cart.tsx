@@ -28,7 +28,7 @@ const Cart = () => {
 
   const postData = async () => {
     try {
-      await fetch(`https://next-js-ecommerce-7izyzfuvq-seymurpasha.vercel.app/api/cart/${session?.user?.email}`, {
+      await fetch(`${window.location.hostname}/api/cart/${session?.user?.email}`, {
         method: 'PUT',
         headers: {
           Accept: 'application/json',
