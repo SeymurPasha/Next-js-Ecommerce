@@ -3,7 +3,7 @@ import Providers from 'next-auth/providers';
 
  const options = {
 
-  site : process.env.NEXTAUTH_URL,
+  site : window.origin,
   // Configure one or more authentication providers
   providers: [
   Providers.Google({
