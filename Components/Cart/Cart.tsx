@@ -7,7 +7,6 @@ import { useSession } from 'next-auth/client';
 import { MainContext } from '../../context/Context';
 import CartItem from '../CartItem/CartItem';
 
-
 const Cart = () => {
   const {
     isModalVisible, setIsModalVisible, cart, setCart,
@@ -69,7 +68,7 @@ const Cart = () => {
     const newCart:any = cart.filter((i:any) => i.id !== id);
     setCart(newCart);
   };
-
+  
   return (
     <>
       <ShoppingOutlined className="card-icon" onClick={showModal} />

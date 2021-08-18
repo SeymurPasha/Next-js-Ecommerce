@@ -3,6 +3,8 @@ import ImageGallery from '../Components/imageGallery/ImageGallery';
 import RecommendedItems from '../Components/RecommendedItems/RecommendedItems';
 import Delimeter from '../Components/Delimeter/Delimeter';
 
+
+
 export async function getStaticProps() {
   const res = await fetch('https://openapi.etsy.com/v2/listings/active?api_key=78pwg3cv7qq8f16h74a0yf6v&includes=Images&limit=100');
 
