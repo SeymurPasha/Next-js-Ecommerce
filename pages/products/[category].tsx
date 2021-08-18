@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ParsedUrlQuery } from 'querystring';
-import { Card } from 'antd';
+import { Card, Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 import { GetServerSideProps } from 'next';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import FilterComponent from '../../Components/FilterComponent/FilterComponent';
@@ -106,7 +107,7 @@ export default function Products({ products, category } : { products:Object[], c
           dataLength={filteredProducts.length}
           next={getMorePosts}
           hasMore={true}
-          loader = {<h1>Loading...</h1>}
+          loader = {<h1></h1>} 
         >
           <div className="displayed-products">
             {filteredProducts.map((i:any, index) => (
