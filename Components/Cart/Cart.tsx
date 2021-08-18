@@ -28,7 +28,7 @@ const Cart = () => {
 
   const postData = async () => {
     try {
-      await fetch(`http://localhost:3000/api/cart/${session?.user?.email}`, {
+      await fetch(`https://next-js-ecommerce-gray.vercel.app/api/cart/${session?.user?.email}`, {
         method: 'PUT',
         headers: {
           Accept: 'application/json',
@@ -50,7 +50,7 @@ const Cart = () => {
   }, [cart]);
 
   useEffect(() => {
-    axios('http://localhost:3000/api/cart', {
+    axios('https://next-js-ecommerce-gray.vercel.app/api/cart', {
       params: {
         user_email: session?.user?.email,
       },
