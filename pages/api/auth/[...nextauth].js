@@ -31,4 +31,4 @@ import Providers from 'next-auth/providers';
   database: process.env.DATABASE_URL,
 }
 
-export default (req,res) => NextAuth(req,res,options).then((error) => console.log(error))
+export default (req,res) => NextAuth(req,res,options)
